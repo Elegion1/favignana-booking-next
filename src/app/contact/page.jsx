@@ -1,6 +1,12 @@
 import ContactForm from "@/components/ContactForm"
 import { getLabel } from "../../../utils/labels"
 import ClientLayout from "@/components/ClientLayout"
+import seoData from "../../../utils/seoData"
+
+export const metadata = {
+    title: seoData["/contact"].title,
+    description: seoData["/contact"].description,
+};
 
 export default function Contact() {
 

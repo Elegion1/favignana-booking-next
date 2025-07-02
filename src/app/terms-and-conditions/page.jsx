@@ -1,4 +1,11 @@
 import ClientLayout from "@/components/ClientLayout";
+import seoData from "../../../utils/seoData";
+
+export const metadata = {
+    title: seoData["/terms-and-conditions"].title,
+    description: seoData["/terms-and-conditions"].description,
+};
+
 
 export default function TermsAndConditions() {
     return (

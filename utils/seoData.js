@@ -20,12 +20,15 @@ export const seoData = {
     description:
       "Contattaci per info su transfer o escursioni. Rispondiamo subito!",
   },
+  "/terms-and-conditions": {
+    title: "Termini e Condizioni | Favignana Transfer",
+    description: "Leggi i nostri termini e condizioni per l'utilizzo dei servizi di transfer ed escursioni.",
+  },
   "default": {
-    title: "Favignana Transfer | Arriva al porto di Trapani per Favignana | Escursioni Saline",
+    title: "Favignana Transfer | Transfer al porto di Trapani per Favignana | Escursioni Saline",
     description:
       "Prenota transfer, escursioni e Transfer. Servizio professionale da Trapani e Palermo",
   },
-  // Aggiungi tutte le altre pagine
 };
 
 export default seoData;

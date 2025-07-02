@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
 import { getLabel } from '../../utils/labels';
-import seoData from '../../utils/seoData';
+
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
@@ -18,7 +18,6 @@ export default function ClientLayout({ children }) {
   };
 
   const title = mastTitles[pathname] || 'Page Not Found';
-  const pageSeo = seoData[pathname] || seoData["default"];
 
   return (
     <>
