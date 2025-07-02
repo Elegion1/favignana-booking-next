@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-a: #ffffff; /* Bianco */
+  --color-b: #d1e5ec; /* Azzurro molto chiaro (sfondo) */
+  --color-c: #40d9ff; /* Azzurro brillante (colore principale del logo) */
+  --color-d: #7be5ff; /* Azzurro chiaro (hover, dettagli) */
+  --color-e: #ff8c40; /* Arancione acceso (colore secondario per contrasto) */
+  --color-f: #1b4b5a; /* Blu petrolio scuro (sfondi scuri, contrasto con testo bianco) */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*:not([class]) {
+  color: #4c4c4c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.text-a {
+  color: var(--color-a) !important;
+}
+
+.text-b {
+  color: var(--color-b) !important;
+}
+
+.text-c {
+  color: var(--color-c) !important;
+}
+
+.text-d {
+  color: var(--color-d) !important;
+}
+
+.text-e {
+  color: var(--color-e) !important;
+}
+
+.text-f {
+  color: var(--color-f) !important;
+}
+
+.bg-a {
+  background-color: var(--color-a) !important;
+}
+
+.bg-b {
+  background-color: var(--color-b) !important;
+}
+
+.bg-c {
+  background-color: var(--color-c) !important;
+}
+
+.bg-d {
+  background-color: var(--color-d) !important;
+}
+
+.bg-e {
+  background-color: var(--color-e) !important;
+}
+
+.bg-f {
+  background-color: var(--color-f) !important;
+}
+
+.navbar {
+  height: 100px;
+}
+
+p,
+span {
+  white-space: pre-line;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+button:hover {
+  transform: scale(0.99);
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+
+a:hover {
+  filter: brightness(1.1);
+  transition: 0.3s;
+}
+
+input,
+select:focus {
+  outline: none;
+}
+
+#masthead {
+  background-image: url("../../public/image.png");
+  background-size: cover; /* Copre l'intera area */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita la ripetizione */
+}
+
+#info {
+  top: 60%;
+}
+
+#space {
+  height: 15vh;
+}
+
+#icon {
+  width: 3rem;
+}
+
+#callToAction {
+  background-image: url("../../public/image2.png");
+  background-size: cover; /* Copre l'intera area */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita la ripetizione */
+}
+
+#floater {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw; /* Maggiore larghezza su schermi piccoli */
+}
+
+#floater2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw; /* Maggiore larghezza su schermi piccoli */
+}
+
+#descImg {
+  background-image: url("../../public/image3.png");
+  background-size: cover; /* Copre l'intera area */
+  background-position: right; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita la ripetizione */
+}
+
+#transferForm {
+  background-image: url("../../public/image4.png");
+  background-size: cover; /* Copre l'intera area */
+  background-position: bottom; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Evita la ripetizione */
+}
+
+#contactImage {
+  background-image: url("../../public/contacts.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#excursionForm {
+  background-image: url("../../public/museo-del-sale.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+#formTop {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #floater {
+    left: 3%;
+    transform: none; /* Rimuove la centratura */
+    width: 45vw;
+  }
+  #floater2 {
+    right: 3%;
+    transform: none; /* Rimuove la centratura */
+    width: 45vw;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (max-width: 1092px) {
+  #transferForm,
+  #excursionForm {
+    background-size: cover; /* Copre l'intera area */
+    background-position: center;
+  }
 }
