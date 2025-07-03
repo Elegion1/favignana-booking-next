@@ -1,3 +1,4 @@
+import StructuredData from '@/components/StructuredData';
 import seoData from '../../utils/seoData';
 import './globals.css';
 import './style.css';
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body>
+        <StructuredData />
         {children}
       </body>
     </html>

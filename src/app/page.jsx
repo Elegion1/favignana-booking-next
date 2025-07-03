@@ -3,6 +3,7 @@ import Link from "next/link";
 import ClientLayout from "@/components/ClientLayout";
 import HomeClient from "@/components/HomeClient";
 import seoData from "../../utils/seoData";
+import StructuredData from '@/components/StructuredData';
 
  export const metadata = {
       title: seoData["/"].title,
@@ -31,8 +32,9 @@ export default function Home() {
 
   return (
     <>
+    
       <ClientLayout>
-
+      
       <HomeClient />
 
       <div id="callToAction" className="relative h-[120vh] md:h-[80vh]">
