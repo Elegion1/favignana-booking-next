@@ -24,7 +24,7 @@ export default function Footer() {
                     <div className="flex flex-col justify-center md:items-start items-center">
                         <h5 className="text-2xl uppercase mb-3">{getLabel("footerTitle")}</h5>
                         <p>{getLabel("footerBody")}</p>
-                        <Link className="mt-10 text-c" href="/terms-and-conditions">{getLabel("termsConditions")}</Link>
+                        <Link title="Vai a termini e conidzioni" className="mt-10 text-c" href="/terms-and-conditions">{getLabel("termsConditions")}</Link>
                     </div>
                     <div className="flex justify-center items-center">
                         <img className="w-[200px]" src="./logo-color.png" alt="" />

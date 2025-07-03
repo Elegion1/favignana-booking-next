@@ -33,7 +33,7 @@ export default function Navbar() {
         <>
             <div className='absolute flex justify-center items-center z-10 bg-gray-200/35 w-full'>
                 {/* LOGO SINISTRA visibile solo su schermo grande */}
-                <Link href="/">
+                <Link title="Torna alla Home" href="/">
                     <img className='hidden md:block md:max-w-25 max-w-10 md:me-10' src="./logo-no-background.png" alt="mg-transfer-logo" />
                 </Link>
 
@@ -52,7 +52,7 @@ export default function Navbar() {
                             <ul className="flex justify-center items-center space-x-4">
                                 {text.map((item, index) => (
                                     <li key={index}>
-                                        <Link
+                                        <Link title={`Vai a  ${item.link}`}
                                             href={item.link}
                                             className={pathname === item.link ? activeClass : inactiveClass}
                                         >

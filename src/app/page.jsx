@@ -40,10 +40,10 @@ export default function Home() {
         <div id="floater" className="md:absolute bg-a p-8 md:p-4 shadow-2xl">
 
           <p className="mb-2">{getLabel("CTAAbstract")}</p>
-          <h2 className="text-2xl mb-3">{getLabel("CTATitle")}</h2>
+          <h3 className="text-2xl mb-3">{getLabel("CTATitle")}</h3>
           <p className="mb-4">{getLabel("CTABody")}</p>
 
-          <Link className="inline-block bg-c p-4 uppercase text-a" href="/transfer">
+          <Link title="Vai a transfer" className="inline-block bg-c p-4 uppercase text-a" href="/transfer">
             {getLabel("CTAButton")}
           </Link>
 
@@ -52,10 +52,10 @@ export default function Home() {
         <div id="floater2" className="md:absolute bg-a p-8 md:p-4 shadow-2xl">
 
           <p className="mb-2">{getLabel("CTAAbstract2")}</p>
-          <h2 className="text-2xl mb-3">{getLabel("CTATitle2")}</h2>
+          <h3 className="text-2xl mb-3">{getLabel("CTATitle2")}</h3>
           <p className="mb-4">{getLabel("CTABody2")}</p>
 
-          <Link className="inline-block bg-c p-4 uppercase text-a" href="/excursion">
+          <Link title="Vai a escursioni" className="inline-block bg-c p-4 uppercase text-a" href="/excursion">
             {getLabel("CTAButton2")}
           </Link>
 
