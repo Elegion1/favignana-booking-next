@@ -6,6 +6,14 @@ const emailJSPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 const emailJSServiceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const encriptionSecretKey = process.env.NEXT_PUBLIC_ENCRYPTION_SECRET_KEY;
 
+const clientID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
+const initialOptions = {
+  "client-id": clientID,
+  currency: "EUR",
+  intent: "capture",
+  locale: "it_IT",
+};
+
 const generateBookingCode = async () => {
   console.log("Generazione del codice di prenotazione...");
 
@@ -235,4 +243,5 @@ export {
   sendBookingEmail,
   generateAndDownloadPDF,
   testBookingFlow,
+  initialOptions
 };

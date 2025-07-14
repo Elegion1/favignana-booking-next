@@ -39,7 +39,7 @@ export const labels = {
       "Inserisci i tuoi dati per la prenotazione e per eventuali comunicazioni.",
     paymentCompleted: "Pagamento completato con successo!",
     thankYouBooking:
-      "Grazie per la tua prenotazione! Riceverai una conferma via email.",
+      "Il pagamento è andato a buon fine, grazie per la tua prenotazione! Riceverai una conferma via email.",
     paymentError: "Pagamento non riuscito",
     paymentErrorDescription:
       "Qualcosa è andato storto con il pagamento. Riprova più tardi o contatta l'assistenza.",
@@ -50,15 +50,15 @@ export const labels = {
     whatsapp: "WhatsApp",
     footerTitle: "Contattaci",
     footerBody: "Per maggiori informazioni o richieste speciali, scrivici!",
-    taxiInfoTitle: "Transfer per Favignana",
+    taxiInfoTitle: "Transfer Favignana",
     taxiInfoBody:
-      "Transfer privato o condiviso dagli aeroporti di Trapani e Palermo al porto per Favignana.",
+      "Navetta da aeroporto di Trapani o Palermo al porto di Trapani per Favignana.",
     shipInfoTitle: "Scopri Favignana",
     shipInfoBody:
       "Dalle acque cristalline alle incantevoli calette, dai sentieri panoramici alle tradizioni locali, scopri un angolo di paradiso che ti aspetta.",
-    excursionInfoTitle: "Escursioni alle Saline di Nubia",
+    excursionInfoTitle: "Escursioni alle Saline di Trapani",
     excursionInfoBody:
-      "Scopri le meraviglie delle Saline di Nubia, un luogo incantevole dove la natura e la cultura si incontrano.",
+      "Scopri le meraviglie delle Saline di Trapani con la vista mozzafiato delle isole Egadi sullo sfondo.",
     PDFMessage:
       "Il PDF con il riepilogo della prenotazione verrà scaricato automaticamente, clicca sul pulsante qui sotto se non viene scaricato",
     downloadPDF: "Clicca qui per scaricare il PDF",
@@ -82,7 +82,7 @@ export const labels = {
     CTAAbstract: "TRANSFER PER FAVIGNANA",
     CTATitle: "Prenota il tuo transfer",
     CTABody:
-      "Raggiungi il porto senza stress con il nostro servizio transfer. Scegli il punto di partenza e prenota in pochi clic",
+      "Raggiungi il porto di Trapani senza stress con il nostro servizio di transfer. Scegli il punto di partenza e prenota in pochi clic",
     CTAButton: "Prenota ora",
     CTAAbstract2: "ESCURSIONI SALINE DI NUBIA",
     CTATitle2: "Prenota la tua escursione",

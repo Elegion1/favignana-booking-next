@@ -2,18 +2,11 @@
 import { useState, useEffect, useRef } from "react";
 import ExcursionBookingForm from "@/components/ExcurisonBookingForm";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { initialOptions } from "@/app/api/api";
 
 export default function TransferClient() {
     const [excursionBookingFormHeight, setExcursionBookingFormHeight] = useState(0);
     const excursionBookingFormRef = useRef(null);
-
-    const clientID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
-
-    const initialOptions = {
-        "client-id": clientID,
-        currency: "EUR",
-        intent: "capture",
-    };
 
     useEffect(() => {
         const observer = new ResizeObserver(entries => {
@@ -37,6 +30,6 @@ export default function TransferClient() {
                     <ExcursionBookingForm ref={excursionBookingFormRef} />
                 </PayPalScriptProvider>
             </div>
-        </div>
+        </div >
     )
 }

@@ -1,9 +1,9 @@
 import { useState, useMemo, useRef, forwardRef } from 'react';
 import { getLabel } from '../../utils/labels';
 import ErrorMessage from './ErrorMessage';
-import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import { generateBookingCode, sendEncryptedBookingData, sendBookingEmail, generateAndDownloadPDF } from '@/app/api/api';
 import Link from "next/link";
+import BookinFormPayment from './BookingFormPayment';
 
 const TransferBookingForm = forwardRef((props, ref) => {
     const transferBookingFormRef = ref || useRef(null);
@@ -380,28 +380,35 @@ const TransferBookingForm = forwardRef((props, ref) => {
         console.log('Form Data:', bookingData);
     };
 
-    const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
-    const onCreateOrder = (data, actions) => {
-        return actions.order.create({
-            purchase_units: [
-                {
-                    amount: {
-                        currency_code: "EUR",
-                        value: calculatePrice(),
-                    },
-                    custom_id: dataToSubmit.code,
-                    description: `Transfer - Tratta: ${dataToSubmit.route} - ${dataToSubmit.passengers} PAX`,
-                },
-            ],
+    // PayPal server-side integration
+    const onCreateOrder = async () => {
+        if (!dataToSubmit) return;
+        const res = await fetch('/api/paypal/create-order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                value: calculatePrice(),
+                type: `transfer`,
+                description: `Tratta: ${dataToSubmit.route}`,
+                passengers: dataToSubmit.passengers,
+                custom_id: dataToSubmit.code,
+            }),
         });
+        const data = await res.json();
+        if (data && data.id) return data.id;
+        throw new Error(data.error || 'Errore creazione ordine PayPal');
     };
 
-    const onApproveOrder = async (data, actions) => {
+    const onApproveOrder = async (data) => {
         try {
-            const details = await actions.order.capture();
+            const res = await fetch('/api/paypal/capture-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ orderID: data.orderID }),
+            });
+            const details = await res.json();
             setPaymentStatus(details.status);
-            // console.log('Payment Details:', details);
 
             const bookingDetails = {
                 ...dataToSubmit,
@@ -414,7 +421,7 @@ const TransferBookingForm = forwardRef((props, ref) => {
             sendBookingEmail(bookingDetails);
             generateAndDownloadPDF(bookingDetails);
             setShowPayment(false);
-            alert("Prenotazione completata con successo!");
+            // alert("Prenotazione completata con successo!");
         } catch (error) {
             console.error("Errore durante l'approvazione del pagamento:", error);
             alert("Errore durante l'elaborazione della prenotazione. Riprova più tardi.");
@@ -559,7 +566,7 @@ const TransferBookingForm = forwardRef((props, ref) => {
                                             {errors.timeReturn && <ErrorMessage message={errors.timeReturn} />}
                                         </div>
                                     </div>
-                                    
+
                                     <button
                                         id='closeButton'
                                         type="button"
@@ -741,15 +748,10 @@ const TransferBookingForm = forwardRef((props, ref) => {
                     <>
                         <div className="d-flex items-center justify-center mt-5">
                             <div className="checkout">
-                                {isPending ? (
-                                    <p className='uppercase'>{getLabel("loading")}</p>
-                                ) : (
-                                    <PayPalButtons
-                                        style={{ layout: "vertical" }}
-                                        createOrder={(data, actions) => onCreateOrder(data, actions)}
-                                        onApprove={(data, actions) => onApproveOrder(data, actions)}
-                                    />
-                                )}
+                                <BookinFormPayment
+                                    createOrder={onCreateOrder}
+                                    onApprove={onApproveOrder}
+                                />
                             </div>
                         </div>
                     </>

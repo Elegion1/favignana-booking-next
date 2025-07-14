@@ -2,17 +2,11 @@
 import { useState, useEffect, useRef } from "react";
 import TransferBookingForm from "@/components/TransferBookingForm";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { initialOptions } from "@/app/api/api";
 
 export default function TransferClient() {
     const [transferBookingFormHeight, setTransferBookingFormHeight] = useState(0);
     const transferBookingFormRef = useRef(null);
-
-    const clientID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
-    const initialOptions = {
-        "client-id": clientID,
-        currency: "EUR",
-        intent: "capture",
-    };
 
     useEffect(() => {
         const observer = new ResizeObserver(entries => {
@@ -30,7 +24,6 @@ export default function TransferClient() {
 
     return (
 
-
         <div id="transferForm"
             style={{ height: transferBookingFormHeight + 100 }}
             className="w-full h-dvh flex items-center justify-center">
@@ -38,6 +31,7 @@ export default function TransferClient() {
                 <PayPalScriptProvider options={initialOptions}>
                     <TransferBookingForm ref={transferBookingFormRef} />
                 </PayPalScriptProvider>
+
             </div>
         </div>
     )
