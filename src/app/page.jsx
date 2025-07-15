@@ -4,6 +4,7 @@ import ClientLayout from "@/components/ClientLayout";
 import HomeClient from "@/components/HomeClient";
 import seoData from "../../utils/seoData";
 import StructuredData from '@/components/StructuredData';
+import CookieConsent from "@/components/CookieConsent";
 
  export const metadata = {
       title: seoData["/"].title,
@@ -34,7 +35,7 @@ export default function Home() {
     <>
     
       <ClientLayout>
-      
+      <CookieConsent />
       <HomeClient />
 
       <div id="callToAction" className="relative h-[120vh] md:h-[80vh]">

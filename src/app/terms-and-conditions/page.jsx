@@ -53,6 +53,13 @@ export default function TermsAndConditions() {
                     <p className="mb-4">Per qualsiasi domanda o richiesta relativa ai Termini e Condizioni, puoi contattarci tramite il modulo presente nella sezione contatti del sito.</p>
                 </section>
 
+                <section className="mb-6">
+                    <h2 className="text-2xl font-semibold mb-2">8. Cookie</h2>
+                    <p className="mb-4">
+                        Questo sito utilizza cookie tecnici necessari al funzionamento e, previo consenso, cookie di terze parti per finalità statistiche e di marketing. Proseguendo la navigazione o cliccando su "Accetta" nel banner, acconsenti all'uso dei cookie secondo la nostra cookie policy. Per maggiori dettagli consulta la <a href="/privacy" className="underline text-c">Cookie Policy</a>.
+                    </p>
+                </section>
+
             </div>
         </ClientLayout>
     );
