@@ -1,7 +1,7 @@
 import { getLabel } from "../../../utils/labels";
-import ClientLayout from "@/components/ClientLayout";
+import ClientLayout from "../../components/ClientLayout";
 import seoData from "../../../utils/seoData";
-import TransferClient from "@/components/TransferClient";
+import TransferClient from "../../components/TransferClient";
 
 export const metadata = {
     title: seoData["/transfer"].title,

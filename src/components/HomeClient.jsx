@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import Info from "@/components/Info";
+import Info from "./Info";
 
 export default function HomeCLient() {
     const [infoHeight, setInfoHeight] = useState(0);

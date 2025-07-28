@@ -1,19 +1,22 @@
 // seoData.js
 export const seoData = {
   "/": {
-    title: "Favignana Transfer | Transfer | Escursioni",
+    title: "Transfer Favignana | Aeroporto Trapani Palermo ➤ Favignana | Escursioni Saline",
     description:
-      "Prenota escursioni e Transfer. Servizio professionale da Trapani, Palermo e Marsala.",
+      "🚐 Transfer da aeroporto Trapani/Palermo a porto Favignana. ⛵ Escursioni saline di Trapani. Prenotazione online, prezzi fissi, servizio professionale.",
+    keywords: "transfer favignana, aeroporto trapani favignana, transfer palermo favignana, escursioni saline trapani, prenotazione transfer sicilia"
   },
   "/transfer": {
-    title: "Transfer da Trapani a Favignana | Prenota Subito",
+    title: "Transfer Aeroporto Trapani Palermo ➤ Porto Favignana | Prenotazione Online",
     description:
-      "Servizio comodo e puntuale da aeroporto o porto di Trapani. Prenotazione online facile.",
+      "🚐 Transfer professionale da aeroporto Trapani Birgi e Palermo verso porto di Trapani per Favignana. Prenotazione online, prezzi fissi, servizio garantito.",
+    keywords: "transfer aeroporto trapani, transfer palermo trapani, favignana transfer, prenotazione transfer sicilia"
   },
   "/excursion": {
-    title: "Escursioni alle saline di Trapani | Favignana Transfer",
+    title: "Escursioni Saline di Trapani | Tour Guidato + Transfer | Prenota Online",
     description:
-      "Scopri le meravigliose saline di Trapani con le nostre escursioni. Prenota ora e vivi un'esperienza unica!",
+      "⛵ Escursioni guidate alle storiche saline di Trapani con transfer incluso. Mulini a vento, tramonto, degustazioni. Prenota la tua esperienza unica!",
+    keywords: "escursioni saline trapani, tour saline trapani, mulini vento trapani, tramonto saline"
   },
   "/contact": {
     title: "Contatti | Favignana Transfer",

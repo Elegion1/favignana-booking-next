@@ -1,16 +1,22 @@
-import StructuredData from '@/components/StructuredData';
+import StructuredData from '../components/StructuredData';
 import seoData from '../../utils/seoData';
 import './globals.css';
 import './style.css';
 
 export const metadata = {
-  title: seoData['default'],
+  title: seoData['default'].title,
   description: seoData['default'].description,
-  icon: {
-    rel: 'icon',
-    url: '/favicon.ico',
+  keywords: seoData['default'].keywords,
+  authors: [{ name: 'MG Transfer' }],
+  generator: 'Next.js',
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://www.favignana-transfer.it',
   },
   openGraph: {
+    type: 'website',
+    locale: 'it_IT',
     title: seoData['default'].title,
     description: seoData['default'].description,
     url: 'https://www.favignana-transfer.it',
@@ -18,11 +24,17 @@ export const metadata = {
     images: [
       {
         url: '/og-image.jpeg',
-        width: 300,
-        height: 300,
-        alt: 'Favignana Transfer',
+        width: 1200,
+        height: 630,
+        alt: 'Favignana Transfer - Servizi di transfer e escursioni',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: seoData['default'].title,
+    description: seoData['default'].description,
+    images: ['/og-image.jpeg'],
   }
 };
 

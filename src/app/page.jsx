@@ -1,10 +1,10 @@
 import { getLabel } from '../../utils/labels';
 import Link from "next/link";
-import ClientLayout from "@/components/ClientLayout";
-import HomeClient from "@/components/HomeClient";
+import ClientLayout from "../components/ClientLayout";
+import HomeClient from "../components/HomeClient";
 import seoData from "../../utils/seoData";
-import StructuredData from '@/components/StructuredData';
-import CookieConsent from "@/components/CookieConsent";
+import StructuredData from '../components/StructuredData';
+import CookieConsent from "../components/CookieConsent";
 
  export const metadata = {
       title: seoData["/"].title,

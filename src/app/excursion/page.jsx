@@ -1,6 +1,6 @@
 import { getLabel } from "../../../utils/labels";
-import ClientLayout from "@/components/ClientLayout";
-import ExcursionClient from "@/components/ExcursionClient";
+import ClientLayout from "../../components/ClientLayout";
+import ExcursionClient from "../../components/ExcursionClient";
 import seoData from "../../../utils/seoData";
 
 export const metadata = {

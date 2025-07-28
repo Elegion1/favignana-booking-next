@@ -1,7 +1,7 @@
 import { useState, useMemo, useRef, forwardRef } from 'react';
 import { getLabel } from '../../utils/labels';
 import ErrorMessage from './ErrorMessage';
-import { generateBookingCode, sendEncryptedBookingData, sendBookingEmail, generateAndDownloadPDF } from '@/app/api/api';
+import { generateBookingCode, sendEncryptedBookingData, sendBookingEmail, generateAndDownloadPDF } from '../app/api/api';
 import Link from "next/link";
 import BookinFormPayment from './BookingFormPayment';
 

@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import ExcursionBookingForm from "@/components/ExcurisonBookingForm";
+import ExcursionBookingForm from "./ExcurisonBookingForm";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { initialOptions } from "@/app/api/api";
+import { initialOptions } from "../app/api/api";
 
 export default function TransferClient() {
     const [excursionBookingFormHeight, setExcursionBookingFormHeight] = useState(0);
