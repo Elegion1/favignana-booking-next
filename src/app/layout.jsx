@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import StructuredData from '../components/StructuredData';
 import seoData from '../../utils/seoData';
 import './globals.css';
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body>
+        <SpeedInsights />
         <StructuredData />
         {children}
       </body>
