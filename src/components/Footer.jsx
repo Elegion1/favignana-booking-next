@@ -15,6 +15,12 @@ export default function Footer() {
             title: `${getLabel("email")}:`,
             body: "info@favignana-transfer.it",
         },
+         {
+            image: "./phone.png",
+            class: "text-xl",
+            title: `${getLabel("phone")}:`,
+            body: "+39 347 58 99 460",
+        },
 
     ]
     return (
