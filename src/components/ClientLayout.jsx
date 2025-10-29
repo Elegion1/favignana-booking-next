@@ -16,9 +16,10 @@ export default function ClientLayout({ children }) {
     '/terms-and-conditions': getLabel("termsConditions"),
     '/excursion': getLabel("excursionMasterTitle"),
     '/blog': getLabel("blogMasterTitle"),
+    '/privacy': getLabel("privacyMasterTitle"),
   };
 
-  const title = mastTitles[pathname] || 'Page Not Found';
+  const title = mastTitles[pathname] || 'Favignana Transfer';
 
   return (
     <>
