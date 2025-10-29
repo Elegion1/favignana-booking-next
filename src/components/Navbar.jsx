@@ -27,6 +27,10 @@ export default function Navbar() {
             link: "/contact",
             name: getLabel("contactUs"),
         },
+        {
+            link: "/blog",
+            name: getLabel('blog'),
+        }
     ];
 
     return (

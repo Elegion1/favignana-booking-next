@@ -15,16 +15,20 @@ export default function ClientLayout({ children }) {
     '/contact': getLabel("contactMasterTitle"),
     '/terms-and-conditions': getLabel("termsConditions"),
     '/excursion': getLabel("excursionMasterTitle"),
+    '/blog': getLabel("blogMasterTitle"),
   };
 
   const title = mastTitles[pathname] || 'Page Not Found';
 
   return (
     <>
-      {/* Meta tags should be handled in app/head.js or page.js in Next.js app dir */}
-      <Navbar />
-      <Masthead title={title} />
-      {children}
+      <header>
+        <Navbar />
+        <Masthead title={title} />
+      </header>
+      <main>
+        {children}
+      </main>
       <Footer />
     </>
   );
