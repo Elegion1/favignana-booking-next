@@ -38,7 +38,7 @@ export default function Navbar() {
             <div className='absolute flex justify-center items-center z-10 bg-gray-200/35 w-full'>
                 {/* LOGO SINISTRA visibile solo su schermo grande */}
                 <Link title="Torna alla Home" href="/">
-                    <img className='hidden md:block md:max-w-25 max-w-10 md:me-10' src="./logo-no-background.png" alt="mg-transfer-logo" />
+                    <img className='hidden md:block md:max-w-25 max-w-10 md:me-10' src="/logo-no-background.png" alt="mg-transfer-logo" />
                 </Link>
 
                 <div className="h-24 top-0 left-0 flex justify-center items-center flex-col">
