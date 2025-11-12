@@ -138,7 +138,22 @@ const TransferBookingForm = forwardRef((props, ref) => {
                 minimumPassengers: 1,
             },
             individual: {
-                price: 25,
+                price: 30,
+                priceIncrement: 5,
+                minimumPassengers: 1,
+            },
+            duration: 30,
+        },
+        {
+            id: 2,
+            departure: "Trapani Porto",
+            arrival: "Aeroporto Trapani Birgi V. Florio",
+            collective: {
+                price: 10,
+                minimumPassengers: 3,
+            },
+            individual: {
+                price: 30,
                 priceIncrement: 5,
                 minimumPassengers: 1,
             },
@@ -153,37 +168,23 @@ const TransferBookingForm = forwardRef((props, ref) => {
                 minimumPassengers: 1,
             },
             individual: {
-                price: 100,
+                price: 90,
                 priceIncrement: 10,
                 minimumPassengers: 1,
             },
             duration: 60,
         },
-        {
-            id: 2,
-            arrival: "Aeroporto Trapani Birgi V. Florio",
-            departure: "Trapani Porto",
-            collective: {
-                price: 10,
-                minimumPassengers: 3,
-            },
-            individual: {
-                price: 25,
-                priceIncrement: 5,
-                minimumPassengers: 3,
-            },
-            duration: 30,
-        },
+
         {
             id: 4,
-            arrival: "Aeroporto Palermo Falcone Borsellino",
             departure: "Trapani Porto",
+            arrival: "Aeroporto Palermo Falcone Borsellino",
             collective: {
                 price: 25,
                 minimumPassengers: 4,
             },
             individual: {
-                price: 100,
+                price: 90,
                 priceIncrement: 10,
                 minimumPassengers: 1,
             },
@@ -304,7 +305,7 @@ const TransferBookingForm = forwardRef((props, ref) => {
         const selectedRoute = routes.find(route => `${route.departure} - ${route.arrival}` === formData.route);
         if (!selectedRoute) return 0;
 
-        const DISCOUNT = 0.1; // 10% di sconto
+        const DISCOUNT = 0; // 10% di sconto
 
         const returnPrice = (price) => {
             if (showReturn) {
