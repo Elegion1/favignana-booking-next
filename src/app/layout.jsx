@@ -3,6 +3,7 @@ import StructuredData from '../components/StructuredData';
 import seoData from '../../utils/seoData';
 import './globals.css';
 import './style.css';
+import { GoogleTagManager } from "@next/third-parties"
 
 export const metadata = {
   title: seoData['default'].title,
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it">
       <body>
+        <GoogleTagManager gtmId="GTM-PQQNLRDN" />
         <SpeedInsights />
         <StructuredData />
         {children}
