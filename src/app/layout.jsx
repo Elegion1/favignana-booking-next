@@ -3,7 +3,7 @@ import StructuredData from '../components/StructuredData';
 import seoData from '../../utils/seoData';
 import './globals.css';
 import './style.css';
-import { GoogleTagManager } from "@next/third-parties"
+import { GoogleTagManager } from "@next/third-parties/google"
 
 export const metadata = {
   title: seoData['default'].title,
