@@ -92,7 +92,7 @@ export const labels = {
     descTitle: "Transfer per Favignana",
     descBody:
       "Servizio transfer da e per gli aeroporti di Trapani e Palermo, con arrivo diretto al porto di Trapani per l'imbarco verso Favignana",
-    homeMasterTitle: "Benvenuto su Favignana Transfer",
+    homeMasterTitle: "Transfer da Trapani e Palermo per Favignana",
     transferMasterTitle: "Prenota il tuo Transfer",
     contactMasterTitle: "Contattaci",
     excursionMasterTitle: "Prenota la tua Escursione",

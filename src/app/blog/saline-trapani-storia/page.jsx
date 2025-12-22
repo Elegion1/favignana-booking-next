@@ -72,7 +72,7 @@ export default function SalineDiTrapaniStoria() {
                         </p>
                         <div className="flex gap-4">
                             <Link
-                                href="/escursioni"
+                                href="/excursion"
                                 className="bg-c text-white px-6 py-3 rounded hover:bg-c/80"
                             >
                                 Prenota un Tour
